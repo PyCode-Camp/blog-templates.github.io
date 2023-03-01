@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="tailus ui html-vite and tailwindcss 3.1 boilerplate"
+    />
+    <title>Home Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+  
+
+  
+  </head>
+  <!-- flex items-center -->
+  <body class="min-h-screen  bg-gradient-to-br from-purple-200 to-indigo-400">
+    
+    <!--  -->
+    <header>
+
+      <nav class=" bg-gray-400 shadow-xl">
+        <div class="container mx-auto px-4 flex justify-between items-center h-[88px]">
+
+
+          <ion-icon name="menu" class="text-3xl cursor-pointer md:hidden" onclick="onToggleMenu(this)"></ion-icon>
+          <!--  -->
+          <div class="brand-icon ">PyCode-Camp</div>
+          
+          <!--  -->
+          <div class="navbar-nav shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-500 bg-[#015E7D] md:text-black text-[#FFFFFF] md:bg-gray-400 
+                      md:static absolute md:z-auto z-[-1] opacity-0 md:opacity-100 md:min-h-fit min-h-[50vh] left-0  md:w-fit w-[267px] top-[-400px] px-5 rounded-tr-[30px]">
+
+            <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
+              
+              <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none md:hidden">
+                <a href="" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
+              </li>
+              
+
+              <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none ">
+                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center hover:text-amber-400 hover:duration-500">News</a>
+              </li>
+              
+
+              <li class="nav-item  md:w-fit w-full  border-[#A6A4A4] border-b-2 md:border-none  ">
+                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">LifeStyle</a>
+              </li>
+             
+
+              <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none  ">
+                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Sports</a>
+              </li>
+              
+
+              <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none  ">
+                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Business</a>
+              </li>
+
+              
+              <li class="nav-item  md:w-fit w-full">
+                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Quizzes</a>
+              </li>
+            </ul>
+
+          
+
+          </div>
+
+          
+
+            
+
+        </div>
+
+      </nav>
+
+    </header>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <div class="max-w-3xl mx-auto px-8 sm:px-0">
+      <div class="sm:w-7/12 sm:mx-auto">
+        <div 
+          role="tablist"
+          aria-label="tabs"
+          class="relative w-max mx-auto h-12 grid grid-cols-3 items-center px-[3px] rounded-full bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition"
+        >
+          <div class="absolute indicator h-11 my-auto top-0 bottom-0 left-0 rounded-full bg-white shadow-md"></div>
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            id="tab-1"
+            tabindex="0"
+            class="relative block h-10 px-6 tab rounded-full"
+          >
+            <span class="text-gray-800">First Tab</span>
+          </button>
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            id="tab-2"
+            tabindex="-1"
+            class="relative block h-10 px-6 tab rounded-full"
+          >
+            <span class="text-gray-800">Second Tab</span>
+          </button>
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-3"
+            id="tab-3"
+            tabindex="-1"
+            class="relative block h-10 px-6 tab rounded-full"
+          >
+            <span class="text-gray-800">Third Tab</span>
+          </button>
+        </div>
+        <div class=" relative rounded-3xl bg-purple-50">
+          <div
+            role="tabpanel"
+            id="panel-1"
+            class="tab-panel p-6 transition duration-300"
+          >
+            <h2 class="text-xl font-semibold text-gray-800">First tab panel</h2>
+            <p class="mt-4 text-gray-600 max-h-72 overflow-y-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi dicta dolore ab corrupti fugit voluptatum libero eaque dignissimos impedit at accusantium, atque quas nemo cupiditate doloremque dolorum quae corporis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+               Reiciendis reprehenderit vitae, eum unde in commodi alias ipsum mollitia optio. Perferendis, quaerat sed ducimus tenetur reiciendis distinctio doloremque accusantium magni harum!
+            </p>
+          </div>
+          <div
+            role="tabpanel"
+            id="panel-2"
+            class="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300"
+          >
+            <h2 class="text-xl font-semibold text-gray-800">Second tab panel</h2>
+            <p class="mt-4 text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta.</p>
+          </div>
+          <div
+            role="tabpanel"
+            id="panel-3"
+            class="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300"
+          >
+            <h2 class="text-xl font-semibold text-gray-800">Third tab panel</h2>
+            <p class="mt-4 text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta.</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+             
+        <script>
+
+          const navbar_nav= document.querySelector(".navbar-nav");
+
+
+          function onToggleMenu(e) {
+            e.name = e.name === "menu" ? "close-outline" : "menu";
+
+            if(e.name === "close-outline"){
+              navbar_nav.classList.remove("top-[-400px]");
+              navbar_nav.classList.add("top-[13%]");
+              navbar_nav.classList.add("opacity-100")
+            
+            }
+            else{
+              navbar_nav.classList.add("top-[-400px]");
+              navbar_nav.classList.remove("top-[13%]");
+              navbar_nav.classList.remove("opacity-100");
+            }
+            //navbar_nav.classList.toggle("top-[13%]");
+          } 
+
+        </script>
+
+        <!-- ionicons link -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!--  -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
