@@ -12,25 +12,30 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&amp;display=swap" rel="stylesheet"/>
   
-
+    <style>
+      .heading{
+        background-image: url(assets/images/Car\ 9.jpg);
+      }
+    </style>
   
   </head>
   <!-- flex items-center -->
   <body class="min-h-screen  bg-gradient-to-br from-purple-200 to-indigo-400">
     
     <!--  -->
-    <header>
+    <header class="heading">
 
-      <nav class=" bg-gray-400 shadow-xl">
-        <div class="container mx-auto px-4 flex justify-between items-center h-[88px]">
+      <!-- h-[88px] -->
+      <nav class=" nav shadow-xl  bg-image object-cover object-center img-fluid">
+        <div class="container mx-auto px-4 flex justify-between items-center " style="min-height: 13vh;">
 
 
           <ion-icon name="menu" class="text-3xl cursor-pointer md:hidden" onclick="onToggleMenu(this)"></ion-icon>
           <!--  -->
-          <div class="brand-icon ">PyCode-Camp</div>
+          <div class="brand-icon text-white ">PyCode-Camp</div>
           
           <!--  -->
-          <div class="navbar-nav shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-500 bg-[#015E7D] md:text-black text-[#FFFFFF] md:bg-gray-400 
+          <div class="navbar-nav shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-500 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
                       md:static absolute md:z-auto z-[-1] opacity-0 md:opacity-100 md:min-h-fit min-h-[50vh] left-0  md:w-fit w-[267px] top-[-400px] px-5 rounded-tr-[30px]">
 
             <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
