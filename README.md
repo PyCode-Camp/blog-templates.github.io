@@ -1,6 +1,6 @@
-<h1>Tailwind 3.1 - Vite boilerplate</h1>   
+<h1>Blog Template</h1>   
 
-A tailwindcss v3 - Vite project starter
+Blog Website
 
 <h2>Tools</h2> 
 
