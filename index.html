@@ -15,28 +15,29 @@
     <style>
       .heading{
         background-image: url(assets/images/Car\ 9.jpg);
+        min-width: 100vw;
       }
     </style>
   
   </head>
   <!-- flex items-center -->
-  <body class="min-h-screen  bg-gradient-to-br from-purple-200 to-indigo-400">
+  <body class="min-h-screen  bg-gradient-to-br from-red-500 to-indigo-900">
     
     <!--  -->
-    <header class="heading">
+    <header class="heading bg-image object-cover object-center img-fluid rounded-b-[30px] overflow-hidden">
 
       <!-- h-[88px] -->
-      <nav class=" nav shadow-xl  bg-image object-cover object-center img-fluid">
+      <nav class=" nav shadow-xl ">
         <div class="container mx-auto px-4 flex justify-between items-center " style="min-height: 13vh;">
 
 
-          <ion-icon name="menu" class="text-3xl cursor-pointer md:hidden" onclick="onToggleMenu(this)"></ion-icon>
+          <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico" onclick="onToggleMenu(this)"></ion-icon>
           <!--  -->
           <div class="brand-icon text-white ">PyCode-Camp</div>
           
           <!--  -->
-          <div class="navbar-nav shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-500 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
-                      md:static absolute md:z-auto z-[-1] opacity-0 md:opacity-100 md:min-h-fit min-h-[50vh] left-0  md:w-fit w-[267px] top-[-400px] px-5 rounded-tr-[30px]">
+          <div class="navbar-nav shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-700 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
+                      md:static absolute md:z-auto  opacity-0 md:opacity-100 md:min-h-fit min-h-[50vh] left-0  md:w-fit w-[267px] top-[-400px] px-5 rounded-tr-[30px]" id="navBar">
 
             <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
               
@@ -169,24 +170,55 @@
         <script>
 
           const navbar_nav= document.querySelector(".navbar-nav");
-
+          
+          const icon = document.querySelector(".icon");
 
           function onToggleMenu(e) {
             e.name = e.name === "menu" ? "close-outline" : "menu";
 
             if(e.name === "close-outline"){
               navbar_nav.classList.remove("top-[-400px]");
-              navbar_nav.classList.add("top-[13%]");
-              navbar_nav.classList.add("opacity-100")
+              navbar_nav.classList.add("top-[0%]");
+              navbar_nav.classList.add("opacity-100");
+
             
             }
             else{
               navbar_nav.classList.add("top-[-400px]");
-              navbar_nav.classList.remove("top-[13%]");
+              navbar_nav.classList.remove("top-[0%]");
               navbar_nav.classList.remove("opacity-100");
             }
             //navbar_nav.classList.toggle("top-[13%]");
           } 
+
+
+
+        /*  body.addEventListener("click", ()=>{
+
+            if(icon.name === "close-outline"){
+              icon.name === "menu";
+              navbar_nav.classList.add("top-[-400px]");
+              
+            }
+            
+          })*/
+
+          document.addEventListener("click", (e)=>{
+
+            if(icon.name == "close-outline" && e.target.id !== 'navBar' && e.target.id !== 'ico'){
+
+              icon.name = 'menu';
+              navbar_nav.classList.add("top-[-400px]");
+              navbar_nav.classList.remove("top-[0%]");
+              navbar_nav.classList.remove("opacity-100");
+
+
+
+            }
+          })
+          
+
+          
 
         </script>
 
