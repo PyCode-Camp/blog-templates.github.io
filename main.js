@@ -1,8 +1,9 @@
 import "./assets/css/tailwind.css";
 
-let tabs = document.querySelectorAll(".tab")
-let indicator = document.querySelector(".indicator")
-let panels = document.querySelectorAll(".tab-panel")
+let tabs = document.querySelectorAll(".tab");
+let indicator = document.querySelector(".indicator");
+let panels = document.querySelectorAll(".tab-panel");
+let dots = document.querySelectorAll(".dot");
 
 indicator.style.width = tabs[0].getBoundingClientRect().width + 'px'
 indicator.style.left = tabs[0].getBoundingClientRect().left - tabs[0].parentElement.getBoundingClientRect().left + 'px'
@@ -24,6 +25,17 @@ tabs.forEach(tab =>{
         panel.classList.add("invisible", "opacity-0")
       }
     })
+
+    dots.forEach(dot =>{
+
+      let dotLabel = dot.getAttribute("aria-label");
+      if(tabTarget === dotLabel){
+        dot.classList.add("activ");
+      }
+      else{
+        dot.classList.remove("activ");
+      }
+    });
   })
 })
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
@@ -17,19 +17,23 @@
         background-image: url(assets/images/Car\ 9.jpg);
         min-width: 100vw;
       }
+
+      .activ{
+        background-color: #524c4cb2 !important;
+      }
     </style>
   
   </head>
   <!-- flex items-center -->
   <!-- bg-gradient-to-br from-red-500 to-indigo-900 -->
-  <body class="min-h-screen bg-white ">
+  <body class="min-h-screen bg-white box-border ">
     
     <!--  -->
     <header class="heading mb-3 bg-image object-cover object-center img-fluid rounded-b-[30px] overflow-hidden">
 
       <!-- h-[88px] -->
-      <nav class=" nav shadow-xl ">
-        <div class="container mx-auto px-4 flex justify-between items-center " style="min-height: 13vh;">
+      <nav class=" nav shadow-xl md:max-w-full">
+        <div class="container mx-auto px-4 flex justify-between items-center  " style="min-height: 13vh;">
 
 
           <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico" onclick="onToggleMenu(this)"></ion-icon>
@@ -85,12 +89,12 @@
     
     
     <!-- Section tab -->
-     <div class="container mx-auto px-4">
+     <div class="container mx-auto px-4 mb-4">
       <div class="">
         <div 
           role="tablist"
           aria-label="tabs"
-          class="relative mb-4 mx-auto h-12 grid grid-cols-3 items-center px-[3px] rounded-[6px] bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition"
+          class="relative mb-4 mx-auto h-12 grid grid-cols-3 divide-x items-center px-[3px] rounded-[6px] bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition"
         >
           <div class="absolute indicator h-11 my-auto top-0 bottom-0 left-0 rounded-[6px] bg-[#00FEEF] shadow-md"></div>
           <button
@@ -99,7 +103,7 @@
             aria-controls="panel-1"
             id="tab-1"
             tabindex="0"
-            class="relative block h-10 px-6 tab rounded-full"
+            class="relative block h-10 px-6 tab "
           >
             <span class="text-gray-800">Featured</span>
           </button>
@@ -109,7 +113,7 @@
             aria-controls="panel-2"
             id="tab-2"
             tabindex="-1"
-            class="relative block h-10 px-6 tab rounded-full"
+            class="relative block h-10 px-6 tab "
           >
             <span class="text-gray-800">Latest</span>
           </button>
@@ -119,7 +123,7 @@
             aria-controls="panel-3"
             id="tab-3"
             tabindex="-1"
-            class="relative block h-10 px-6 tab rounded-full"
+            class="relative block h-10 px-6 tab "
           >
             <span class="text-gray-800">Trending</span>
           </button>
@@ -128,7 +132,7 @@
 
         <!--Start:  tab Panel -->
 
-        <div class=" relative  min-h-[60vh] max-h-[60vh] overflow-y-auto">
+        <div class=" relative  min-h-[57vh] max-h-[57vh] overflow-y-auto overscroll-contain scroll-smooth snap-y mb-2">
           <!-- Panel 1 -->
           <div
             role="tabpanel"
@@ -137,7 +141,7 @@
           >
 
           <!-- article 1 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -147,7 +151,7 @@
           </div>
 
           <!-- article 2 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -157,7 +161,7 @@
           </div>
 
           <!-- article 3 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -167,17 +171,17 @@
           </div>
 
           <!-- article 4 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <h3 class=" text-[15px] leading-[18.9px] font-bold snap-start">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
               <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
             
           </div>
 
           <!-- article 5 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -187,7 +191,7 @@
           </div>
 
           <!-- article 6 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -205,7 +209,7 @@
             class="absolute top-0 invisible opacity-0 tab-panel p-1 transition duration-300"
           >
            <!-- article 1 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -215,7 +219,7 @@
           </div>
 
           <!-- article 2 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -225,7 +229,7 @@
           </div>
 
           <!-- article 3 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -235,7 +239,7 @@
           </div>
 
           <!-- article 4 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -245,7 +249,7 @@
           </div>
 
            <!-- article 5 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2">
+           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -255,7 +259,7 @@
           </div>
 
            <!-- article 6 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2">
+           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -273,7 +277,7 @@
           >
            
            <!-- article 4 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2">
+           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -284,7 +288,7 @@
 
 
            <!-- article 1 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2">
+           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -294,7 +298,7 @@
           </div>
 
            <!-- article 2 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2">
+           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -305,7 +309,7 @@
 
 
            <!-- article 3 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2">
+           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -316,7 +320,7 @@
 
 
            <!-- article 4 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2">
+           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -326,7 +330,7 @@
           </div>
 
            <!-- article 5 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2">
+           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
               <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
@@ -336,9 +340,53 @@
           </div>
           </div>
         </div>
+
+        <div class=" flex justify-center ">
+          <button class="h-2 w-2 rounded-full bg-slate-300 activ dot" aria-label="panel-1"></button>
+          <button class="h-2 w-2 rounded-full bg-slate-300 mx-2 dot" aria-label="panel-2"></button>
+          <button class="h-2 w-2 rounded-full bg-slate-300 dot " aria-label="panel-3"></button>
+        </div>
       </div>
     </div>  
+    <!-- section tab:End -->
 
+    <!-- Social links -->
+    <section>
+
+      <div class="flex justify-center mb-2">
+
+        <ion-icon name="logo-twitter" class=" border-2 border-cyan-500 rounded-full p-2 text-cyan-500 mx-2 "></ion-icon>
+        <ion-icon name="logo-google" class=" border-2 border-red-700 rounded-full p-2 text-red-700 mr-2"></ion-icon>
+        <ion-icon name="logo-linkedin" class="border-2 border-blue-500 rounded-full p-2 text-blue-500 mr-2 "></ion-icon>
+        <ion-icon name="logo-instagram" class=" border-2   border-red-800 rounded-full p-2 text-red-800 mr-2"></ion-icon>
+        <ion-icon name="logo-facebook" class=" border-2 border-blue-700 rounded-full p-2 text-blue-700 mr-2"></ion-icon>
+        <ion-icon name="logo-youtube" class="border-2 border-red-600 rounded-full p-2 text-red-600 mr-2"></ion-icon>
+
+      </div>
+    </section>
+    <!-- End: social section -->
+
+
+    <!-- Subscribe section -->
+    <section>
+      
+      <div class="bg-secondary p-2 flex items-center justify-between ">
+
+        <div class="  ">
+          <h4 class=" text-[9px] leading-3" style="text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); color: rgba(30, 30, 30, 0.41);">Sign with your email Account</h4>
+          <form action="">
+            <input type="text" class=" h-[3vh] w-[106px] text-[11px] font-[600] rounded-l-full">
+            <input type="submit" class="border-1 text-[9px] font-[600] h-[3vh] w-[54px] -ml-1 rounded-r-full text-white bg-red-600" value="subscribe" name="subscribe">
+          </form>
+
+        </div>
+
+        <div class=" bg-black flex">
+          <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt="">
+          <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt="">
+        </div>
+      </div>
+    </section>
 
 
              
