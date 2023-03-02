@@ -1,6 +1,5 @@
 import "./assets/css/tailwind.css";
 
-/* 
 let tabs = document.querySelectorAll(".tab")
 let indicator = document.querySelector(".indicator")
 let panels = document.querySelectorAll(".tab-panel")
@@ -27,4 +26,4 @@ tabs.forEach(tab =>{
     })
   })
 })
-*/
+
