@@ -28,7 +28,8 @@ body {
 }
 
 .heading {
-  background-image: url(assets/images/Car\ 9.jpg);
+  /* background-image: url(assets/images/Car\ 9.jpg); */
+  background-color: #040814ea;
   min-width: 100vw;
 }
 
