@@ -45,7 +45,7 @@
           <div class=" absolute top-[15vh] left-[18%] z-50 " >
             <div class=" relative hidden transition-all ease-in duration-700 " id="search">
               <ion-icon name="search-outline" class="text-white absolute text-2xl top-[10px] left-[3px] z-10"></ion-icon>
-              <input type="text " class=" h-[43px] bg-[#BDBBBB] py-3 p-7 rounded-full focus:outline focus:outline-2 focus:outline-red-500 blur-[1px]" placeholder="Search">
+              <input type="text " id="searchIn" class=" h-[43px] bg-[#BDBBBB] py-3 p-7 rounded-full focus:outline focus:outline-2 focus:outline-red-500 blur-[1px]" placeholder="Search">
               <ion-icon name="mic-outline" class="text-red-500 absolute top-[11px] right-[10px] text-lg"></ion-icon>
             </div>
           </div>
@@ -474,7 +474,7 @@
 
           document.addEventListener("click", (e)=>{
 
-            if(searchIcon.name == "close-outline" && e.target.id !== 'search' && e.target.id !== 'searchIco'){
+            if(searchIcon.name == "close-outline" && e.target.id !== 'search' && e.target.id !== 'searchIco' && e.target.id !== 'searchIn'){
 
               searchIcon.name = 'search-outline';
               searchInput.classList.add("hidden");
