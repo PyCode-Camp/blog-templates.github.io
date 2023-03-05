@@ -39,3 +39,35 @@ tabs.forEach(tab =>{
   })
 })
 
+
+// Subscribe popOver after a few mintues
+setTimeout(function() {
+  
+    document.querySelector('.modal-overlay').classList.add('opacity-50', 'pointer-events-auto', 'visible');
+    document.querySelector('.modal-overlay').classList.remove('invisible');
+    document.querySelector('.modal').classList.add('opacity-100', 'visible');
+    document.querySelector('.modal').classList.remove('invisible');
+  
+}, 900000);
+
+
+//
+document.querySelector('.modal-overlay').addEventListener('click', function() {
+  this.classList.remove('opacity-50', 'pointer-events-auto','visible');
+  this.classList.add('invisible');
+  document.querySelector('.modal').classList.remove('opacity-50', 'visible')
+  document.querySelector('.modal').classList.add('invisible');
+});
+
+//
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    this.classList.remove('opacity-50', 'pointer-events-auto','visible');
+  this.classList.add('invisible');
+  document.querySelector('.modal').classList.remove('opacity-50', 'visible')
+  document.querySelector('.modal').classList.add('invisible');
+  }
+});
+
+
+

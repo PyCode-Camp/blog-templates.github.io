@@ -1,500 +1,555 @@
 <!DOCTYPE html>
 <html lang="en" class=" scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="tailus ui html-vite and tailwindcss 3.1 boilerplate"
-    />
-    <title>Home Page</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&amp;display=swap" rel="stylesheet"/>
-  
-    <style>
-      .heading{
-        background-image: url(assets/images/Car\ 9.jpg);
-        min-width: 100vw;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="tailus ui html-vite and tailwindcss 3.1 boilerplate" />
+  <title>Home Page</title>
 
-      .activ{
-        background-color: #524c4cb2 !important;
-      }
-    </style>
-  
-  </head>
-  <!-- flex items-center -->
-  <!-- bg-gradient-to-br from-red-500 to-indigo-900 -->
-  <body class="h-screen bg-white box-border  md:overflow-y-visible">
-    
-    <!--  -->
-    <header class="heading mb-3 bg-image object-cover object-center img-fluid rounded-b-[30px] overflow-hidden">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&amp;display=swap"
+    rel="stylesheet" />
 
-      <!-- h-[88px] -->
-      <nav class=" nav shadow-xl md:max-w-full">
-        <div class="container mx-auto px-4 flex justify-between items-center  " style="min-height: 13vh;">
+  <style>
+    .heading {
+      background-image: url(assets/images/Car\ 9.jpg);
+      min-width: 100vw;
+    }
+
+    .activ {
+      background-color: #524c4cb2 !important;
+    }
+  </style>
+
+</head>
+<!-- flex items-center -->
+<!-- bg-gradient-to-br from-red-500 to-indigo-900 -->
+
+<body class="h-screen bg-white box-border  md:overflow-y-visible">
+
+  <!--  -->
+  <header class="heading mb-3 bg-image object-cover object-center img-fluid rounded-b-[30px] overflow-hidden">
+
+    <!-- h-[88px] -->
+    <nav class=" nav shadow-xl md:max-w-full">
+      <div class="container mx-auto px-4 flex justify-between items-center  " style="min-height: 13vh;">
 
 
-          <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico" onclick="onToggleMenu(this)"></ion-icon>
-          <!--  -->
-          <div class="brand-icon text-white ">PyCode-Camp</div>
+        <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico"
+          onclick="onToggleMenu(this)"></ion-icon>
+        <!--  -->
+        <div class="brand-icon text-white ">PyCode-Camp</div>
 
-          <ion-icon name="search-outline" class="icon text-3xl cursor-pointer md:hidden text-white searchIcon" id="searchIco" onclick="onToggleSearch(this)"></ion-icon>
-          
-          <div class=" absolute top-[15vh] left-[18%] z-50 " >
-            <div class=" relative hidden transition-all ease-in duration-700 " id="search">
-              <ion-icon name="search-outline" class="text-white absolute text-2xl top-[10px] left-[3px] z-10"></ion-icon>
-              <input type="text " id="searchIn" class=" h-[43px] bg-[#BDBBBB] py-3 p-7 rounded-full focus:outline focus:outline-2 focus:outline-red-500 blur-[1px]" placeholder="Search">
-              <ion-icon name="mic-outline" class="text-red-500 absolute top-[11px] right-[10px] text-lg"></ion-icon>
-            </div>
+        <ion-icon name="search-outline" class="icon text-3xl cursor-pointer md:hidden text-white searchIcon"
+          id="searchIco" onclick="onToggleSearch(this)"></ion-icon>
+
+        <div class=" absolute top-[15vh] left-[18%] z-50 ">
+          <div class=" relative hidden transition-all ease-in duration-700 " id="search">
+            <ion-icon name="search-outline" class="text-white absolute text-2xl top-[10px] left-[3px] z-10"></ion-icon>
+            <input type="text " id="searchIn"
+              class=" h-[43px] bg-[#BDBBBB] py-3 p-7 rounded-full focus:outline focus:outline-2 focus:outline-red-500 blur-[1px]"
+              placeholder="Search">
+            <ion-icon name="mic-outline" class="text-red-500 absolute top-[11px] right-[10px] text-lg"></ion-icon>
           </div>
-          <!--  -->
-          <div class="navbar-nav z-50 shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-700 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
-                      md:static absolute md:z-auto  opacity-0 md:opacity-100 md:min-h-fit min-h-[50vh] left-0  md:w-fit w-[267px] top-[-400px] px-5 rounded-tr-[30px]" id="navBar">
-
-            <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
-              
-              <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none md:hidden">
-                <a href="" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
-              </li>
-              
-
-              <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none ">
-                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center hover:text-amber-400 hover:duration-500">News</a>
-              </li>
-              
-
-              <li class="nav-item  md:w-fit w-full  border-[#A6A4A4] border-b-2 md:border-none  ">
-                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">LifeStyle</a>
-              </li>
-             
-
-              <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none  ">
-                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Sports</a>
-              </li>
-              
-
-              <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none  ">
-                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Business</a>
-              </li>
-
-              
-              <li class="nav-item  md:w-fit w-full">
-                <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Quizzes</a>
-              </li>
-            </ul>
-
-          </div>
-            
-
-        </div>
-
-      </nav>
-
-    </header>
-    
-    
-    
-    
-    <!-- Section tab -->
-     <div class="container mx-auto px-4 mb-4 md:mb-10">
-      <div class="">
-        <div 
-          id="tabs"
-          role="tablist"
-          aria-label="tabs"
-          class="relative mb-4 mx-auto h-[6.5vh] grid grid-cols-3 divide-x items-center px-[3px] rounded-[6px] bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition"
-        >
-          <div class="absolute indicator h-[6vh] my-auto top-0 bottom-0 left-0 rounded-[6px] bg-[#00FEEF] shadow-md"></div>
-          <button
-            role="tab"
-            aria-selected="true"
-            aria-controls="panel-1"
-            id="tab-1"
-            tabindex="0"
-            class="relative block h-[6vh] px-6 tab "
-          >
-            <span class="text-gray-800">Featured</span>
-          </button>
-          <button
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-2"
-            id="tab-2"
-            tabindex="-1"
-            class="relative block h-[6vh] px-6 tab "
-          >
-            <span class="text-gray-800">Latest</span>
-          </button>
-          <button
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-3"
-            id="tab-3"
-            tabindex="-1"
-            class="relative block h-[6vh] px-6 tab "
-          >
-            <span class="text-gray-800">Trending</span>
-          </button>
         </div>
         <!--  -->
+        <div
+          class="navbar-nav z-50 shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-700 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
+                      md:static absolute md:z-auto  opacity-0 md:opacity-100 md:min-h-fit min-h-[50vh] left-0  md:w-fit w-[267px] top-[-400px] px-5 rounded-tr-[30px]"
+          id="navBar">
 
-        <!--Start:  tab Panel -->
+          <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
 
-        <div class=" relative  min-h-[57vh] max-h-[57vh] md:min-h-[65vh] md:max-h-[65vh] lg:min-h-[70vh] lg:max-h-[70vh] overflow-y-auto overscroll-contain scroll-smooth snap-y snap-mandatory mb-2 md:mb-10">
-          <!-- Panel 1 -->
-          <div
-            role="tabpanel"
-            id="panel-1"
-            class="tab-panel p-1 transition duration-300"
-          >
+            <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none md:hidden">
+              <a href="" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
+            </li>
+
+
+            <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none ">
+              <a href=""
+                class="nav-link  flex md:h-fit h-[55px] items-center hover:text-amber-400 hover:duration-500">News</a>
+            </li>
+
+
+            <li class="nav-item  md:w-fit w-full  border-[#A6A4A4] border-b-2 md:border-none  ">
+              <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">LifeStyle</a>
+            </li>
+
+
+            <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none  ">
+              <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Sports</a>
+            </li>
+
+
+            <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none  ">
+              <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Business</a>
+            </li>
+
+
+            <li class="nav-item  md:w-fit w-full">
+              <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Quizzes</a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+
+  <!-- Section tab -->
+  <div class="container mx-auto px-4 mb-4 md:mb-10">
+    <div class="">
+      <div id="tabs" role="tablist" aria-label="tabs"
+        class="relative mb-4 mx-auto h-[6.5vh] grid grid-cols-3 divide-x items-center px-[3px] rounded-[6px] bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition">
+        <div class="absolute indicator h-[6vh] my-auto top-0 bottom-0 left-0 rounded-[6px] bg-[#00FEEF] shadow-md">
+        </div>
+        <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"
+          class="relative block h-[6vh] px-6 tab ">
+          <span class="text-gray-800">Featured</span>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1"
+          class="relative block h-[6vh] px-6 tab ">
+          <span class="text-gray-800">Latest</span>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1"
+          class="relative block h-[6vh] px-6 tab ">
+          <span class="text-gray-800">Trending</span>
+        </button>
+      </div>
+      <!--  -->
+
+      <!--Start:  tab Panel -->
+
+      <div
+        class=" relative  min-h-[57vh] max-h-[57vh] md:min-h-[65vh] md:max-h-[65vh] lg:min-h-[70vh] lg:max-h-[70vh] overflow-y-auto overscroll-contain scroll-smooth snap-y snap-mandatory mb-2 md:mb-10">
+        <!-- Panel 1 -->
+        <div role="tabpanel" id="panel-1" class="tab-panel p-1 transition duration-300">
 
           <!-- article 1 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
-            <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
+            <img src=" assets/images/Car 9.jpg"
+              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+              <h3
+                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
+                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
+                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
           <!-- article 2 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
-            <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
+            <img src=" assets/images/Car 9.jpg"
+              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+              <h3
+                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
+                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
+                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
           <!-- article 3 -->
-         <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
-            <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
+            <img src=" assets/images/Car 9.jpg"
+              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+              <h3
+                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
+                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
+                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
           <!-- article 4 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
+            <img src=" assets/images/Car 9.jpg"
+              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+              <h3
+                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
+                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
+                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
           <!-- article 5 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
+            <img src=" assets/images/Car 9.jpg"
+              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+              <h3
+                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
+                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
+                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
           <!-- article 6 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 9.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
               <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
-          </div>
+        </div>
 
 
-          <!-- Panel 2 -->
-          <div
-            role="tabpanel"
-            id="panel-2"
-            class="absolute top-0 invisible opacity-0 tab-panel p-1 transition duration-300"
-          >
-           <!-- article 1 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src="assets/images/Car 14.jpg" class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
+        <!-- Panel 2 -->
+        <div role="tabpanel" id="panel-2"
+          class="absolute top-0 invisible opacity-0 tab-panel p-1 transition duration-300">
+          <!-- article 1 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+            <img src="assets/images/Car 14.jpg"
+              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+              <h3
+                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
+                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
+                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
           <!-- article 2 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src="assets/images/Car 14.jpg" class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
+            <img src="assets/images/Car 14.jpg"
+              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+              <h3
+                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
+                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
+                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
           <!-- article 3 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src="assets/images/Car 14.jpg" class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
+            <img src="assets/images/Car 14.jpg"
+              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+              <h3
+                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
+                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
+                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
           <!-- article 4 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
               <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
-           <!-- article 5 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+          <!-- article 5 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
               <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
+
           </div>
 
-           <!-- article 6 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+          <!-- article 6 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" assets/images/Car 14.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
             <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
               <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
-            
-          </div>
-          </div>
 
-          <!-- Panel-3 -->
-          <div
-            role="tabpanel"
-            id="panel-3"
-            class="absolute top-0 invisible opacity-0 tab-panel p-1 transition duration-300"
-          >
-           
-           <!-- article 4 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-            
-          </div>
-
-
-           <!-- article 1 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-            
-          </div>
-
-           <!-- article 2 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-            
-          </div>
-
-
-           <!-- article 3 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-            
-          </div>
-
-
-           <!-- article 4 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-            
-          </div>
-
-           <!-- article 5 -->
-           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-            
-          </div>
           </div>
         </div>
 
-        <div class=" flex justify-center ">
-          <button class="h-2 w-2 rounded-full bg-slate-300 activ dot" aria-label="panel-1"></button>
-          <button class="h-2 w-2 rounded-full bg-slate-300 mx-2 dot" aria-label="panel-2"></button>
-          <button class="h-2 w-2 rounded-full bg-slate-300 dot " aria-label="panel-3"></button>
+        <!-- Panel-3 -->
+        <div role="tabpanel" id="panel-3"
+          class="absolute top-0 invisible opacity-0 tab-panel p-1 transition duration-300">
+
+          <!-- article 4 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
+            <div class="relative">
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+            </div>
+
+          </div>
+
+
+          <!-- article 1 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
+            <div class="relative">
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+            </div>
+
+          </div>
+
+          <!-- article 2 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
+            <div class="relative">
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+            </div>
+
+          </div>
+
+
+          <!-- article 3 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
+            <div class="relative">
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+            </div>
+
+          </div>
+
+
+          <!-- article 4 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
+            <div class="relative">
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+            </div>
+
+          </div>
+
+          <!-- article 5 -->
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+            <img src=" assets/images/Car 11.jpg" class="w-[144px] h-[90px] object-cover" alt="Pic1">
+            <div class="relative">
+              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
+                beware let that be a learn to you</h3>
+              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>  
-    <!-- section tab:End -->
 
-    <!-- Social links -->
-    <section class="mb-[1vh]">
+      <div class=" flex justify-center ">
+        <button class="h-2 w-2 rounded-full bg-slate-300 activ dot" aria-label="panel-1"></button>
+        <button class="h-2 w-2 rounded-full bg-slate-300 mx-2 dot" aria-label="panel-2"></button>
+        <button class="h-2 w-2 rounded-full bg-slate-300 dot " aria-label="panel-3"></button>
+      </div>
+    </div>
+  </div>
+  <!-- section tab:End -->
 
-      <div class="flex justify-center ">
+  <!-- Social links -->
+  <section class="mb-[1vh]">
 
-        <ion-icon name="logo-twitter" class=" border-2 border-cyan-500 rounded-full p-2 text-cyan-500 mx-2 "></ion-icon>
-        <ion-icon name="logo-google" class=" border-2 border-red-700 rounded-full p-2 text-red-700 mr-2"></ion-icon>
-        <ion-icon name="logo-linkedin" class="border-2 border-blue-500 rounded-full p-2 text-blue-500 mr-2 "></ion-icon>
-        <ion-icon name="logo-instagram" class=" border-2   border-red-800 rounded-full p-2 text-red-800 mr-2"></ion-icon>
-        <ion-icon name="logo-facebook" class=" border-2 border-blue-700 rounded-full p-2 text-blue-700 mr-2"></ion-icon>
-        <ion-icon name="logo-youtube" class="border-2 border-red-600 rounded-full p-2 text-red-600 mr-2"></ion-icon>
+    <div class="flex justify-center ">
+
+      <ion-icon name="logo-twitter" class=" border-2 border-cyan-500 rounded-full p-2 text-cyan-500 mx-2 "></ion-icon>
+      <ion-icon name="logo-google" class=" border-2 border-red-700 rounded-full p-2 text-red-700 mr-2"></ion-icon>
+      <ion-icon name="logo-linkedin" class="border-2 border-blue-500 rounded-full p-2 text-blue-500 mr-2 "></ion-icon>
+      <ion-icon name="logo-instagram" class=" border-2   border-red-800 rounded-full p-2 text-red-800 mr-2"></ion-icon>
+      <ion-icon name="logo-facebook" class=" border-2 border-blue-700 rounded-full p-2 text-blue-700 mr-2"></ion-icon>
+      <ion-icon name="logo-youtube" class="border-2 border-red-600 rounded-full p-2 text-red-600 mr-2"></ion-icon>
+
+    </div>
+  </section>
+  <!-- End: social section -->
+
+
+  <!-- Subscribe section -->
+  <section>
+
+    <div class="bg-secondary h-[11vh] flex items-center gap-5 rounded-t-[15px]">
+
+      <div class=" border-r-[1px] p-2">
+        <h4 class=" text-[9px] leading-3"
+          style="text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); color: rgba(30, 30, 30, 0.41);">Sign with your email
+          Account</h4>
+        <form action="">
+          <input type="email"
+            class=" h-[21px] w-[106px] text-[11px] font-[600] p-2 focus:outline-none focus:ring-1 focus:border-sky-500 focus:ring-sky-500 
+                  outline-none rounded-l-full bg-slate-900/20 invalid:border-pink-600 invalid:text-pink-600 focus:invalid:border-pink-600 focus:invalid:ring-pink-500"
+            style="color:rgba(30, 30, 30, 0.41);">
+          <input type="submit"
+            class="border-1 text-[9px] font-[600] py-[4px] px-[7px] -ml-[3.5px]  rounded-r-full text-center text-white bg-red-600"
+            value="subscribe" name="subscribe">
+        </form>
 
       </div>
-    </section>
-    <!-- End: social section -->
 
-
-    <!-- Subscribe section -->
-    <section>
-      
-      <div class="bg-secondary h-[11vh] flex items-center gap-5 rounded-t-[15px]">
-
-        <div class=" border-r-[1px] p-2">
-          <h4 class=" text-[9px] leading-3" style="text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); color: rgba(30, 30, 30, 0.41);">Sign with your email Account</h4>
-          <form action="">
-            <input type="text" class=" h-[3vh] w-[106px] text-[11px] font-[600] p-2 focus:ring-1 outline-none rounded-l-full bg-slate-900/20" style="color:rgba(30, 30, 30, 0.41);">
-            <input type="submit" class="border-1 text-[9px] font-[600] py-[5px] px-[7px] -ml-[3.5px]  rounded-r-full text-center text-white bg-red-600" value="subscribe" name="subscribe">
-          </form>
-
-        </div>
-
-        <div class=" bg-black flex gap-7">
-          <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt="">
-          <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt="">
-          <a href=""><img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt=""></a>
-        </div>
+      <div class=" flex gap-7">
+        <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt="">
+        <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt="">
+        <a href=""><img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt=""></a>
       </div>
-    </section>
-
-
-             
-        <script>
-
-          const navbar_nav= document.querySelector(".navbar-nav");
-          const icon = document.querySelector(".icon");
-
-
-          const searchInput = document.getElementById("search");
-          const searchIcon = document.querySelector(".searchIcon");
-          const tabs = document.getElementById("tabs");
-
-
-          function onToggleMenu(e) {
-            e.name = e.name === "menu" ? "close-outline" : "menu";
-
-            if(e.name === "close-outline"){
-              navbar_nav.classList.remove("top-[-400px]");
-              navbar_nav.classList.add("top-[0%]");
-              navbar_nav.classList.add("opacity-100");
-
-            
-            }
-            else{
-              navbar_nav.classList.add("top-[-400px]");
-              navbar_nav.classList.remove("top-[0%]");
-              navbar_nav.classList.remove("opacity-100");
-            }
-            //navbar_nav.classList.toggle("top-[13%]");
-          } 
+    </div>
+  </section>
+  <!--  -->
 
 
 
-        /*  body.addEventListener("click", ()=>{
-
-            if(icon.name === "close-outline"){
-              icon.name === "menu";
-              navbar_nav.classList.add("top-[-400px]");
-              
-            }
-            
-          })*/
-
-          document.addEventListener("click", (e)=>{
-
-            if(icon.name == "close-outline" && e.target.id !== 'navBar' && e.target.id !== 'ico'){
-
-              icon.name = 'menu';
-              navbar_nav.classList.add("top-[-400px]");
-              navbar_nav.classList.remove("top-[0%]");
-              navbar_nav.classList.remove("opacity-100");
+  <!--Subscription Modal pop Over  -->
+  <div class="modal-overlay pointer fixed z-50 inset-0 bg-gray-900 opacity-0 invisible"></div>
+  <div class=" modal invisible absolute h-[112px] w-[80vw] top-1/2 left-1/2 z-50 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 shadow-lg">
+    <h2 class="text-[15px] font-semibold" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Subscribe to our newsletter</h2>
+    <p class="text-[12px] mb-2 text-[#1E1E1E69] font-semibold" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Sign in with you email account</p>
+    <form>
+      <div class="flex gap-1">
+        <input type="email" class=" rounded-l-full  h-[27px] w-[179px] text-white p-3 
+        focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500" 
+        style="background-color: rgba(62, 62, 63, 0.25);">
+      <input type="submit" class=" bg-red-600 h-[27px] text-[12px] px-2 rounded-r-full" value="subscribe" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+      </div>
+    </form>
+  </div>
 
 
 
-            }
-          })
 
-          //toggle search box
-          function onToggleSearch(s){
-            s.name = s.name === "search-outline" ? "close-outline" : "search-outline";
+  <script>
 
-            if(s.name == "close-outline"){
-              searchInput.classList.remove("hidden");
-              tabs.classList.add("opacity-0")
-              
-            }
-            else{
-              searchInput.classList.add("hidden");
-              tabs.classList.remove("opacity-0");
-            }
-          }
+    const navbar_nav = document.querySelector(".navbar-nav");
+    const icon = document.querySelector(".icon");
+
+
+    const searchInput = document.getElementById("search");
+    const searchIcon = document.querySelector(".searchIcon");
+    const tabs = document.getElementById("tabs");
+
+
+    function onToggleMenu(e) {
+      e.name = e.name === "menu" ? "close-outline" : "menu";
+
+      if (e.name === "close-outline") {
+        navbar_nav.classList.remove("top-[-400px]");
+        navbar_nav.classList.add("top-[0%]");
+        navbar_nav.classList.add("opacity-100");
+
+
+      }
+      else {
+        navbar_nav.classList.add("top-[-400px]");
+        navbar_nav.classList.remove("top-[0%]");
+        navbar_nav.classList.remove("opacity-100");
+      }
+      //navbar_nav.classList.toggle("top-[13%]");
+    }
+
+
+
+    /*  body.addEventListener("click", ()=>{
+
+        if(icon.name === "close-outline"){
+          icon.name === "menu";
+          navbar_nav.classList.add("top-[-400px]");
           
+        }
+        
+      })*/
 
-          document.addEventListener("click", (e)=>{
+    document.addEventListener("click", (e) => {
 
-            if(searchIcon.name == "close-outline" && e.target.id !== 'search' && e.target.id !== 'searchIco' && e.target.id !== 'searchIn'){
+      if (icon.name == "close-outline" && e.target.id !== 'navBar' && e.target.id !== 'ico') {
 
-              searchIcon.name = 'search-outline';
-              searchInput.classList.add("hidden");
-              tabs.classList.remove("opacity-0");
+        icon.name = 'menu';
+        navbar_nav.classList.add("top-[-400px]");
+        navbar_nav.classList.remove("top-[0%]");
+        navbar_nav.classList.remove("opacity-100");
 
 
 
-            }
+      }
+    })
 
-          })
+    //toggle search box
+    function onToggleSearch(s) {
+      s.name = s.name === "search-outline" ? "close-outline" : "search-outline";
 
-          
+      if (s.name == "close-outline") {
+        searchInput.classList.remove("hidden");
+        tabs.classList.add("opacity-0")
 
-        </script>
+      }
+      else {
+        searchInput.classList.add("hidden");
+        tabs.classList.remove("opacity-0");
+      }
+    }
 
-        <!-- ionicons link -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-        <!--  -->
-    <script type="module" src="./main.js"></script>
-  </body>
+    document.addEventListener("click", (e) => {
+
+      if (searchIcon.name == "close-outline" && e.target.id !== 'search' && e.target.id !== 'searchIco' && e.target.id !== 'searchIn') {
+
+        searchIcon.name = 'search-outline';
+        searchInput.classList.add("hidden");
+        tabs.classList.remove("opacity-0");
+
+
+
+      }
+
+    })
+
+
+    setTimeout(function() {
+      if (window.scrollY > 1000) {
+        document.querySelector('.modal-overlay').classList.add('opacity-100', 'pointer-events-auto');
+      }
+    }, 5000);
+    
+
+
+
+  </script>
+
+  <!-- ionicons link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!--  -->
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
