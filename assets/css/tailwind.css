@@ -26,3 +26,12 @@ body {
 #subscription-form.show {
   display: block;
 }
+
+.heading {
+  background-image: url(assets/images/Car\ 9.jpg);
+  min-width: 100vw;
+}
+
+.activ {
+  background-color: #524c4cb2 !important;
+}
