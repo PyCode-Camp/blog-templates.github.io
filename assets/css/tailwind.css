@@ -26,3 +26,16 @@ body {
 #subscription-form.show {
   display: block;
 }
+<<<<<<< Updated upstream
+=======
+
+.heading {
+  /* background-image: url(assets/images/Car\ 9.jpg); */
+  background-color: #070716e5;
+  min-width: 100vw;
+}
+
+.activ {
+  background-color: #524c4cb2 !important;
+}
+>>>>>>> Stashed changes
