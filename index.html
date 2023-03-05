@@ -26,7 +26,7 @@
   </head>
   <!-- flex items-center -->
   <!-- bg-gradient-to-br from-red-500 to-indigo-900 -->
-  <body class="min-h-screen bg-white box-border overflow-hidden md:overflow-y-visible">
+  <body class="h-screen bg-white box-border  md:overflow-y-visible">
     
     <!--  -->
     <header class="heading mb-3 bg-image object-cover object-center img-fluid rounded-b-[30px] overflow-hidden">
@@ -39,7 +39,16 @@
           <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico" onclick="onToggleMenu(this)"></ion-icon>
           <!--  -->
           <div class="brand-icon text-white ">PyCode-Camp</div>
+
+          <ion-icon name="search-outline" class="icon text-3xl cursor-pointer md:hidden text-white searchIcon" id="searchIco" onclick="onToggleSearch(this)"></ion-icon>
           
+          <div class=" absolute top-[15vh] left-[18%] z-50 " >
+            <div class=" relative hidden transition-all ease-in duration-700 " id="search">
+              <ion-icon name="search-outline" class="text-white absolute text-2xl top-[10px] left-[3px] z-10"></ion-icon>
+              <input type="text " class=" h-[43px] bg-[#BDBBBB] py-3 p-7 rounded-full focus:outline focus:outline-2 focus:outline-red-500 blur-[1px]" placeholder="Search">
+              <ion-icon name="mic-outline" class="text-red-500 absolute top-[11px] right-[10px] text-lg"></ion-icon>
+            </div>
+          </div>
           <!--  -->
           <div class="navbar-nav z-50 shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-700 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
                       md:static absolute md:z-auto  opacity-0 md:opacity-100 md:min-h-fit min-h-[50vh] left-0  md:w-fit w-[267px] top-[-400px] px-5 rounded-tr-[30px]" id="navBar">
@@ -92,18 +101,19 @@
      <div class="container mx-auto px-4 mb-4 md:mb-10">
       <div class="">
         <div 
+          id="tabs"
           role="tablist"
           aria-label="tabs"
-          class="relative mb-4 mx-auto h-12 grid grid-cols-3 divide-x items-center px-[3px] rounded-[6px] bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition"
+          class="relative mb-4 mx-auto h-[6.5vh] grid grid-cols-3 divide-x items-center px-[3px] rounded-[6px] bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition"
         >
-          <div class="absolute indicator h-11 my-auto top-0 bottom-0 left-0 rounded-[6px] bg-[#00FEEF] shadow-md"></div>
+          <div class="absolute indicator h-[6vh] my-auto top-0 bottom-0 left-0 rounded-[6px] bg-[#00FEEF] shadow-md"></div>
           <button
             role="tab"
             aria-selected="true"
             aria-controls="panel-1"
             id="tab-1"
             tabindex="0"
-            class="relative block h-10 px-6 tab "
+            class="relative block h-[6vh] px-6 tab "
           >
             <span class="text-gray-800">Featured</span>
           </button>
@@ -113,7 +123,7 @@
             aria-controls="panel-2"
             id="tab-2"
             tabindex="-1"
-            class="relative block h-10 px-6 tab "
+            class="relative block h-[6vh] px-6 tab "
           >
             <span class="text-gray-800">Latest</span>
           </button>
@@ -123,7 +133,7 @@
             aria-controls="panel-3"
             id="tab-3"
             tabindex="-1"
-            class="relative block h-10 px-6 tab "
+            class="relative block h-[6vh] px-6 tab "
           >
             <span class="text-gray-800">Trending</span>
           </button>
@@ -351,9 +361,9 @@
     <!-- section tab:End -->
 
     <!-- Social links -->
-    <section>
+    <section class="mb-[1vh]">
 
-      <div class="flex justify-center mb-2">
+      <div class="flex justify-center ">
 
         <ion-icon name="logo-twitter" class=" border-2 border-cyan-500 rounded-full p-2 text-cyan-500 mx-2 "></ion-icon>
         <ion-icon name="logo-google" class=" border-2 border-red-700 rounded-full p-2 text-red-700 mr-2"></ion-icon>
@@ -370,18 +380,18 @@
     <!-- Subscribe section -->
     <section>
       
-      <div class="bg-secondary pt-2 pb-5  flex items-center gap-5 rounded-t-[15px]">
+      <div class="bg-secondary h-[11vh] flex items-center gap-5 rounded-t-[15px]">
 
         <div class=" border-r-[1px] p-2">
           <h4 class=" text-[9px] leading-3" style="text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); color: rgba(30, 30, 30, 0.41);">Sign with your email Account</h4>
           <form action="">
             <input type="text" class=" h-[3vh] w-[106px] text-[11px] font-[600] p-2 focus:ring-1 outline-none rounded-l-full bg-slate-900/20" style="color:rgba(30, 30, 30, 0.41);">
-            <input type="submit" class="border-1 text-[9px] font-[600] py-[1.4px] px-[7px] -ml-[3.5px] rounded-r-full text-center text-white bg-red-600" value="subscribe" name="subscribe">
+            <input type="submit" class="border-1 text-[9px] font-[600] py-[5px] px-[7px] -ml-[3.5px]  rounded-r-full text-center text-white bg-red-600" value="subscribe" name="subscribe">
           </form>
 
         </div>
 
-        <div class=" bg-black flex gap-6">
+        <div class=" bg-black flex gap-7">
           <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt="">
           <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt="">
           <a href=""><img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full" alt=""></a>
@@ -394,8 +404,13 @@
         <script>
 
           const navbar_nav= document.querySelector(".navbar-nav");
-          
           const icon = document.querySelector(".icon");
+
+
+          const searchInput = document.getElementById("search");
+          const searchIcon = document.querySelector(".searchIcon");
+          const tabs = document.getElementById("tabs");
+
 
           function onToggleMenu(e) {
             e.name = e.name === "menu" ? "close-outline" : "menu";
@@ -440,7 +455,36 @@
 
             }
           })
+
+          //toggle search box
+          function onToggleSearch(s){
+            s.name = s.name === "search-outline" ? "close-outline" : "search-outline";
+
+            if(s.name == "close-outline"){
+              searchInput.classList.remove("hidden");
+              tabs.classList.add("opacity-0")
+              
+            }
+            else{
+              searchInput.classList.add("hidden");
+              tabs.classList.remove("opacity-0");
+            }
+          }
           
+
+          document.addEventListener("click", (e)=>{
+
+            if(searchIcon.name == "close-outline" && e.target.id !== 'search' && e.target.id !== 'searchIco'){
+
+              searchIcon.name = 'search-outline';
+              searchInput.classList.add("hidden");
+              tabs.classList.remove("opacity-0");
+
+
+
+            }
+
+          })
 
           
 
